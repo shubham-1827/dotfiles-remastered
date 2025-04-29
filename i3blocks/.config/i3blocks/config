@@ -1,0 +1,62 @@
+# i3blocks config file - Tokyonight theme hardcoded colors
+
+separator_block_width=15
+markup=none
+
+# Volume
+[volume]
+label=🔊
+command=$SCRIPT_DIR/volume/volume
+interval=1
+signal=10
+color=#7aa2f7
+align=center
+
+# Memory Usage
+[memory]
+label=🖥️MEM
+command=$SCRIPT_DIR/memory/memory
+interval=30
+color=#9ece6a
+align=center
+
+# Disk Usage
+[disk]
+label= HOME
+command=$SCRIPT_DIR/disk/disk
+interval=30
+color=#7aa2f7
+align=center
+
+# Network Interface
+[iface]
+label=🌐
+command=$SCRIPT_DIR/iface/iface
+interval=3
+color=#7aa2f7
+align=center
+
+# CPU Usage
+[cpu_usage]
+label= CPU
+command=$SCRIPT_DIR/cpu_usage/cpu_usage
+interval=10
+color=#9ece6a
+min_width=CPU 100.00%
+align=center
+
+# Battery
+[battery]
+label=🔋
+command=$SCRIPT_DIR/battery/battery
+interval=30
+color=#e0af68
+align=center
+
+# Date & Time
+[time]
+label=🕑
+command=date '+%Y-%m-%d   %H:%M:%S'
+interval=5
+color=#c0caf5
+align=center
