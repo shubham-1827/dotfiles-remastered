@@ -73,11 +73,11 @@ exec --no-startup-id feh --bg-scale ~/Downloads/anime_girl.jpeg
 exec --no-startup-id dunst
 
 #automatically opening nessasary applications on needed workspaces
-exec --no-startup-id i3-msg 'workspace 1; exec firefox; workspace 2; exec firefox; workspace 3; exec alacritty; workspace 4; exec alacritty; workspace 3'
-
-#assigning opening of terminal and web browser according to workflow
-# assign [class="firefox"] 2
-# assign [class="Alacritty"] 3
+exec --no-startup-id bash -c "i3-msg 'workspace 1'; google-chrome --new-window 'https://www.goclasses.in/' 'https://music.youtube.com/' & sleep 2; \
+i3-msg 'workspace 2'; google-chrome --new-window 'https://pwskills.com/learn/' 'https://chatgpt.com/' 'https://leetcode.com/problemset/' 'https://music.youtube.com/'& sleep 2; \
+i3-msg 'workspace 3'; alacritty -e ~/scripts/tmux_here.sh & sleep 1; \
+i3-msg 'workspace 4'; alacritty & sleep 1; \
+i3-msg 'workspace 3'"
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -95,7 +95,11 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
+# bindsym $mod+Return exec alacritty
 bindsym $mod+Return exec alacritty
+
+#open google-chrome
+bindsym $mod+t exec google-chrome
 
 #fullscreen popup settings
 popup_during_fullscreen smart
