@@ -150,3 +150,9 @@ local function indent_with_a()
 end
 
 vim.keymap.set("n", "a", indent_with_a, { expr = true, noremap = true })
+
+-- to automatically sync the changes with the jupyter notebook in the browser
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "*.py", "*.ipynb" },
+  command = "silent! !jupytext --sync %",
+})
