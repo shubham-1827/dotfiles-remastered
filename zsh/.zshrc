@@ -144,27 +144,12 @@ alias s40='sudo brightnessctl s 40'
 alias s50='sudo brightnessctl s 50'
 alias s60='sudo brightnessctl s 60'
 
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# for anaconda
-export PATH=/home/victor/anaconda3/bin:$PATH
+# conda initialization
+eval "$(/home/victor/miniconda3/bin/conda shell.zsh hook)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/victor/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/victor/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/victor/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/victor/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+# #alias for conda and jupyter lab server
+# alias jlab='conda activate jlabenv && '

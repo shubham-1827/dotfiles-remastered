@@ -74,8 +74,8 @@ exec --no-startup-id dunst
 
 #automatically opening nessasary applications on needed workspaces
 exec --no-startup-id bash -c "i3-msg 'workspace 1'; google-chrome --new-window 'https://www.goclasses.in/' 'https://music.youtube.com/' & sleep 2; \
-i3-msg 'workspace 2'; google-chrome --new-window 'https://pwskills.com/learn/' 'https://chatgpt.com/' 'https://leetcode.com/problemset/' 'https://music.youtube.com/'& sleep 2; \
-i3-msg 'workspace 3'; alacritty -e ~/scripts/tmux_here.sh & sleep 1; \
+i3-msg 'workspace 2'; google-chrome --new-window 'https://pwskills.com/' 'https://chatgpt.com/' 'https://leetcode.com/problemset/' 'https://music.youtube.com/'& sleep 2; \
+i3-msg 'workspace 3'; alacritty & sleep 1; \
 i3-msg 'workspace 4'; alacritty & sleep 1; \
 i3-msg 'workspace 3'"
 

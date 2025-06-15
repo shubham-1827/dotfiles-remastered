@@ -26,12 +26,11 @@ return {
 
     -- Save and run
     vim.keymap.set("n", "<leader>rs", function()
-      vim.cmd("w")  -- Save the file
+      vim.cmd("w") -- Save the file
       vim.cmd("RunCode")
     end, { desc = "Save and Run Code" })
 
     -- run the selected code, can be useful in languages like python
-    vim.keymap.set("v", "<leader>re", "<cmd>RunCode<CR>", { desc = "Run Selected Code" })
-
+    -- vim.keymap.set("v", "<leader>re", "<cmd>RunCode<CR>", { desc = "Run Selected Code" })
   end,
 }

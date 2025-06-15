@@ -1,12 +1,12 @@
 # i3blocks config file - Tokyonight theme hardcoded colors
 
-separator_block_width=15
+separator_block_width=17
 markup=none
 
 # Volume
 [volume]
 label=🔊
-command=$SCRIPT_DIR/volume/volume
+command=$SCRIPT_DIR/volume-pipewire/volume-pipewire
 interval=1
 signal=10
 color=#7aa2f7

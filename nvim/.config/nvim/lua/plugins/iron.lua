@@ -4,7 +4,7 @@ return {
   -- In your iron.nvim config
   config = function()
     local iron = require("iron.core")
-    local view = require("iron.view")
+    -- local view = require("iron.view")
     local common = require("iron.fts.common")
 
     iron.setup({
